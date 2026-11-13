@@ -89,6 +89,54 @@
       border-bottom: 1px dotted var(--line);
     }
     .links-list li:last-child { border-bottom: none; }
+
+    html { scroll-behavior: smooth; }
+
+section {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: transform .2s, box-shadow .2s;
+  animation: fadeUp .6s ease backwards;
+}
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+section:nth-of-type(2) { animation-delay: .1s; }
+section:nth-of-type(3) { animation-delay: .2s; }
+section:nth-of-type(4) { animation-delay: .3s; }
+
+.idx { transition: background .2s, color .2s, border-color .2s; }
+section:hover .idx {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.links-list li a { display: inline-block; transition: transform .2s; }
+.links-list li a:hover { transform: translateX(6px); }
+
+.btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: transform .15s, background .2s;
+}
+.btn:hover { transform: scale(1.05); background: #084f96; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
   </style>
 </head>
 <body>
@@ -179,5 +227,15 @@
       <li>GitHub: <a href="https://github.com/RafaelChirinosAspauza" target="_blank" rel="noopener">github.com/RafaelChirinos</a></li>
     </ul>
   </section>
+
+  <button class="btn" id="copiar">Copiar correo</button>
+
+<script>
+  document.getElementById('copiar').addEventListener('click', async (e) => {
+    await navigator.clipboard.writeText('rafael.chirinos@ucsp.edu.pe');
+    e.target.textContent = '¡Copiado!';
+    setTimeout(() => e.target.textContent = 'Copiar correo', 2000);
+  });
+</script>
 </body>
 </html>

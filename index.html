@@ -5,27 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rafael Chirinos Aspauza</title>
   <style>
-    body {
-    font-family: system-ui, sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-  }
-  h1 { color: #1e2327; }
+    :root {
+      --grey: #666;
+      --ink: #1e2327;
+      --line: #ddd;
+      --accent: #0a66c2;
+    }
 
-  .ref-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.9rem;
-    color: #666;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-  }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    h1 { color: var(--ink); }
+
+    h2 {
+      color: var(--ink);
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .ref-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--grey);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dot { color: #999; }
+
+    header.sheet { margin-bottom: 0; }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+
+    .idx {
+      font-size: 0.8rem;
+      color: var(--grey);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fill {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .links-list li {
+      padding: 6px 0;
+      border-bottom: 1px dotted var(--line);
+    }
+    .links-list li:last-child { border-bottom: none; }
   </style>
 </head>
 <body>
@@ -48,8 +111,69 @@
       <span class="fill"></span>
     </div>
     <p style="max-width:640px; color:var(--grey); font-size:1.02rem;">
-      Estudio Administración, me gustan los deportes y la música. También disfruto leer libros y conocer a diferentes personas. En el futuro me gustaría aprender un nuevo idioma, seguir haciendo deporte y formar parte de un grupo de música.
+      Estudio Administración, me gustan los deportes y la música. También disfruto leer libros y conocer a diferentes personas. En el futuro me gustaría aprender un nuevo idioma y seguir haciendo deporte. Hablo tres idiomas: Español (nativo), Alemán(B1) e Inglés(B2).
     </p>
+  </section>
+
+  <section id="profesor">
+    <div class="section head">
+      <span class="idx">02</span>
+      <h2>Profesor del curso</h2>
+      <span class="fill"></span>
+    </div>
+    <p>
+      Página de mi profesor:
+      <a href=MPLAZAR-link-profesor.com" target="_blank" rel="noopener">REEMPLAZAR nombre del curso y profesor</a>
+    </p>    
+  </section>
+  
+  <section id="universidad">
+    <div class="section-head">
+      <span class="idx">03</span>
+      <h2>Mi universidad</h2>
+      <span class="fill"></span>
+    </div>
+    <p>
+      Estudio en la
+      <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener">Universidad Católica San Pablo (UCSP)</a>,
+      de Arequipa.
+    </p>
+  </section>
+
+   <section id="companeros">
+    <div class="section-head">
+      <span class="idx">04</span>
+      <h2>Páginas de mis compañeros</h2>
+      <span class="fill"></span>
+    </div>
+    <ul class="links-list">
+      <li><a href="https://REEMPLAZAR-compañero-1.com" target="_blank" rel="noopener">REEMPLAZAR nombre del compañero 1</a></li>
+      <li><a href="https://REEMPLAZAR-compañero-2.com" target="_blank" rel="noopener">REEMPLAZAR nombre del compañero 2</a></li>
+      <li><a href="https://REEMPLAZAR-compañero-3.com" target="_blank" rel="noopener">REEMPLAZAR nombre del compañero 3</a></li>
+    </ul>
+  </section>
+
+  <section id="carrera">
+    <div class="section-head">
+      <span class="idx">05</span>
+      <h2>Mi carrera</h2>
+      <span class="fill"></span>
+    </div>
+    <p>
+      Administración de negocios me permite entender cómo funcionan las organizaciones: finanzas, marketing, gestión de personas y toma de decisiones. Aquí escribe en un par de frases por qué elegiste esta carrera y qué te interesa especializar.
+    </p>
+  </section>
+
+  <section id="contacto">
+    <div class="section-head">
+      <span class="idx">06</span>
+      <h2>Contacto</h2>
+      <span class="fill"></span>
+    </div>
+    <ul class="links-list">
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/REEMPLAZAR" target="_blank" rel="noopener">linkedin.com/in/REEMPLAZAR</a></li>
+      <li>GitHub: <a href="https://github.com/REEMPLAZAR" target="_blank" rel="noopener">github.com/REEMPLAZAR</a></li>
+    </ul>
   </section>
 </body>
 </html>

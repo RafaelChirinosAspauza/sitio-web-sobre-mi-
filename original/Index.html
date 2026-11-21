@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="google-site-verification" content="AjDu8G0q1gqXcrXXIFlptxLLd1m2n27CiV7ZuT6xzSY" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Chirinos Aspauza</title>
+  <style>
+    :root {
+      --grey: #666;
+      --ink: #1e2327;
+      --line: #ddd;
+      --accent: #0a66c2;
+    }
+    
+ body {
+  background:
+    radial-gradient(circle at 1px 1px, rgba(10, 102, 194, .08) 1px, transparent 0) 0 0 / 22px 22px,
+    linear-gradient(160deg, #eef6ff 0%, #f7fbff 50%, #fdf6ff 100%);
+  background-attachment: fixed;
+}
+    
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    h1 { color: var(--ink); }
+
+    h2 {
+      color: var(--ink);
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .ref-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--grey);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dot { color: #999; }
+
+    header.sheet { margin-bottom: 0; }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+
+    .idx {
+      font-size: 0.8rem;
+      color: var(--grey);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fill {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .links-list li {
+      padding: 6px 0;
+      border-bottom: 1px dotted var(--line);
+    }
+    .links-list li:last-child { border-bottom: none; }
+
+    html { scroll-behavior: smooth; }
+
+section {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: transform .2s, box-shadow .2s;
+  animation: fadeUp .6s ease backwards;
+}
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+section:nth-of-type(2) { animation-delay: .1s; }
+section:nth-of-type(3) { animation-delay: .2s; }
+section:nth-of-type(4) { animation-delay: .3s; }
+
+.idx { transition: background .2s, color .2s, border-color .2s; }
+section:hover .idx {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.links-list li a { display: inline-block; transition: transform .2s; }
+.links-list li a:hover { transform: translateX(6px); }
+
+.btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: transform .15s, background .2s;
+}
+.btn:hover { transform: scale(1.05); background: #084f96; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+  </style>
+</head>
+<body>
+  <header class="sheet">
+    <div class="ref-line">
+      <span>
+        Perfil estudiantil
+        <span class="dot">.</span>
+        Administración de negocios
+      </span>
+      <span>Arequipa, Perú</span>
+    </div>
+    </header>
+  <h1>Hola, soy Rafael Chirinos</h1>
+  <p>Estudiante de administración de empresas en la Universidad Católica San Pablo (UCSP).</p>
+    <section id="perfil">
+    <div class="section-head">
+      <span class="idx">01</span>
+      <h2>Sobre mí</h2>
+      <span class="fill"></span>
+    </div>
+    <p style="max-width:640px; color:var(--grey); font-size:1.02rem;">
+      Estudio Administración, me gustan los deportes y la música. También disfruto leer libros y conocer a diferentes personas. En el futuro me gustaría aprender un nuevo idioma y seguir haciendo deporte. Hablo tres idiomas: Español (nativo), Alemán(B1) e Inglés(B2).
+    </p>
+  </section>
+
+  <section id="profesor">
+    <div class="section head">
+      <span class="idx">02</span>
+      <h2>Profesor del curso</h2>
+      <span class="fill"></span>
+    </div>
+    <p>
+      Página de mi profesor:
+      <a href="https://socios.spc.org.pe/ecuadros/" target="_blank" rel="noopener">Ernesto Cuadros Vargas, Inroducción a la computación UCSP</a>
+    </p>
+    <p>
+      Linkedin:
+      <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener">Ernesto Cuadros-Vargas</a>
+    </p>    
+  </section>
+  
+  <section id="universidad">
+    <div class="section-head">
+      <span class="idx">03</span>
+      <h2>Mi universidad</h2>
+      <span class="fill"></span>
+    </div>
+    <p>
+      Estudio en la
+      <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener">Universidad Católica San Pablo (UCSP)</a>,
+      de Arequipa.
+    </p>
+  </section>
+
+   <section id="companeros">
+    <div class="section-head">
+      <span class="idx">04</span>
+      <h2>Páginas de mis compañeros</h2>
+      <span class="fill"></span>
+    </div>
+    <ul class="links-list">
+      <li><a href="https://nataliaortizdiezcanseco.github.io" target="_blank" rel="noopener">Natalia Ortiz Diez Canseco</a></li>
+      <li><a href="https://mattiasgaldosibarcena.github.io" target="_blank" rel="noopener">Matthias Galdos Ibárcena</a></li>
+      <li><a href="https://luciananicolecardenaslopez.github.io" target="_blank" rel="noopener">Luciana Cárdenas Lopez</a></li>
+    </ul>
+  </section>
+
+  <section id="carrera">
+    <div class="section-head">
+      <span class="idx">05</span>
+      <h2>Mi carrera</h2>
+      <span class="fill"></span>
+    </div>
+    <p>
+      Administración de negocios me permite entender cómo funcionan las organizaciones: finanzas, marketing, gestión de personas y toma de decisiones. Aquí escribe en un par de frases por qué elegiste esta carrera y qué te interesa especializar.
+    </p>
+  </section>
+
+  <section id="contacto">
+    <div class="section-head">
+      <span class="idx">06</span>
+      <h2>Contacto</h2>
+      <span class="fill"></span>
+    </div>
+    <ul class="links-list">
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/rafael-chirinos-b77a77434/" target="_blank" rel="noopener">linkedin.com/in/RafaelChirinos</a></li>
+      <li>GitHub: <a href="https://github.com/RafaelChirinosAspauza" target="_blank" rel="noopener">github.com/RafaelChirinos</a></li>
+    </ul>
+  </section>
+
+  <button class="btn" id="copiar">Copiar correo</button>
+
+<script>
+  document.getElementById('copiar').addEventListener('click', async (e) => {
+    await navigator.clipboard.writeText('rafael.chirinos@ucsp.edu.pe');
+    e.target.textContent = '¡Copiado!';
+    setTimeout(() => e.target.textContent = 'Copiar correo', 2000);
+  });
+</script>
+</body>
+</html>
